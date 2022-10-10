@@ -1,0 +1,485 @@
+@font-face {
+    font-family: "AvenirLTStd-Roman";
+    src: url(images/avenir_ff/AvenirLTStd-Roman.otf);
+}
+@font-face {
+    font-family: "AvenirLTStd-Book" ;
+    src: url(images/avenir_ff/AvenirLTStd-Book.otf);
+}
+@font-face {
+    font-family: "AvenirLTStd-Black";
+    src: url(images/avenir_ff/AvenirLTStd-Black.otf);
+}
+.header{
+    
+    padding: 4vh 10vw;
+    display: grid;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    padding-left: 10px;
+    gap: 30px;
+    font-family: "AvenirLTStd-Black";
+    font-size: 17px;
+
+}
+
+.gauche {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.droite {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    gap: 30px;
+    font-family: "AvenirLTStd-Black";
+}
+.right ul li .dropdown a:hover{
+    background-color: #ddd;
+ }
+
+.burgermobile {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.searchbar-grand{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 30px;
+}
+.searchbar{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.searchlogo-mobile{
+    display:none;
+}
+.algolia {
+    display: flex;
+    gap: 2vw;
+    font-family: "AvenirLTStd-Roman";
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-bestmatch {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+.bestmatch {
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    width: 300px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    border-bottom-color: grey;
+    
+}
+.bestmatch:after {
+    content: '\02304';
+    float: right;
+    margin-left: 5px;
+}
+input[type=text] {
+    width: 49vw;
+    height: 5vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-family: "AvenirLTStd-Roman";
+    color: #000;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-align: end;
+}
+input::placeholder {
+    color: #000;
+    opacity: 1;
+  }
+.algolia-mobile{
+    display:none;
+}
+select {
+    width: 350px;
+    height: 40px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    padding: 18px 0px;
+    background-color: transparent;
+    text-align: left;
+    font-family: "AvenirLTStd-Roman";
+    color: #000;
+    
+}
+
+.right ul li a{
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  
+  .right img{
+    margin: 0 10px;
+  }
+  
+  .right a{
+    text-align: right;
+  }
+  
+  .right a span{
+    font-size: 10px;
+  }
+  
+  .right ul li{
+    position: relative;
+    list-style: none;
+  }
+  
+  .right ul li .dropdown{
+    top: 45px;
+    position: relative;
+    left: 0;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .right ul li .dropdown .fas{
+    margin-right: 10px;
+    color: gray;
+  }
+  .right ul li .dropdown .fa{
+    margin-right: 10px;
+    color: gray;
+  }
+ .right ul li img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+ .right ul li .dropdown:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+ .right ul li.active .dropdown{
+    display: block;
+    position: absolute;
+  }
+
+  /*filter*/
+.filter{
+    padding-left: 0px;
+    padding-top:3vh;
+}
+.filter .filter-title{
+    position: relative;
+    width: 30px;
+    display: inline;
+    justify-content: space-between;
+}
+.filter .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px 6px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-family: "AvenirLTStd-Roman";
+}
+
+.filter .active, .collapsible:hover {
+    background-color: #555;
+}
+.filter .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.filter .active:after {
+    content: "\2212";
+}
+
+.filter .content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    width: 90%;
+    font-family: "AvenirLTStd-Roman";
+}
+/*Price range*/
+.price-range-min-max{
+    display: inline-block;
+    justify-content: space-between;
+    font-family: "AvenirLTStd-Roman";
+}
+.price-range-min-max input[type=text] {
+    width: 10px;
+    height: 3vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-family: "AvenirLTStd-Roman";
+    color: #000;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-align: end;
+    
+}
+input::placeholder {
+    color: #000;
+    opacity: 1;
+}
+.sp{
+    padding-left: 20px;
+}
+button.price-submit-btn{
+    width:95px;
+    height:35px;
+    font-family: "AvenirLTStd-Book";
+    font-size: 20px;
+    padding:8px;
+    align-items: center;
+    padding-right:3vw;
+}
+/*Products*/
+.product-img {
+    width: 300px;
+    height: 37vh;
+}
+.container-grid {
+    display: grid;
+    max-width: 100%;
+    padding: 2vh 5vw;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+}
+.product-items {
+    padding: 40px;
+}
+
+.product-info {
+    flex: 1;
+    width: 300px;
+}
+/*modifications*/
+h2.sm-title {
+    margin: 0px;
+}
+
+h2.price {
+    margin: 0px;
+}
+h4 {
+    margin: 0px;
+}
+.product-info-top {
+    padding: 10px;
+}
+
+.inline-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-container .sm-title {
+    float: left;
+}
+
+.inline-container .price {
+    float: right;
+}
+
+.product-subtitle h4 {
+    font-family: 'Avenir', sans-serif;
+    color: grey;
+    padding: 10px 0px;
+}
+
+.rating-cart {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.cart img {
+    float: right;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+/*footer*/
+.footer{
+    padding: 2vh 5vw;
+}
+.pagination {
+    display: inline-block;
+    font-family: "AvenirLTStd-Roman";
+    padding-top: 20px;
+    padding-bottom: 40px;
+    align-items: left;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 10px 28px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+    background-color: #000000;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .footer-mobile{
+    display:none;
+  }
+
+
+
+
+@media screen and (max-width: 415px) {
+
+    .burgermobile {
+        display: block;
+        float: right;
+    }
+
+    .header .nav-links {
+        display: none;
+    }
+
+    .searchbar-grand {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    
+    .bestmatch{
+        display: none;
+    }
+
+    .algolia{
+        display:none;
+    }
+    .algolia-mobile{
+        display: block;
+    }
+    .algolia-mobile-details{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        margin-left: 100px;
+    }
+    .searchlogo-mobile{
+        display:none;
+    }
+    input[type=text] {
+        width: 300px;
+        margin-top: 10px;
+        height: 5vh;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid rgb(0, 0, 0);
+        font-family: "AvenirLTStd-Roman";
+        color: #000;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        text-align: end;
+    }
+    input::placeholder {
+        color: #000;
+        opacity: 1;
+    }
+    .footer{
+        display:none;
+    }
+    .footer-mobile{
+        display:grid;
+        grid-template-columns:auto auto auto auto auto;
+    }
+    .pagination-mobile {
+        display: inline-block;
+        font-family: "AvenirLTStd-Roman";
+        padding-top: 20px;
+        padding-bottom: 40px;
+        align-items: left;
+      }
+      
+      .pagination-mobile a {
+        color: black;
+        float: left;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: background-color .3s;
+      }
+      
+      .pagination-mobile a.active {
+        background-color: #000000;
+        color: white;
+      }
+      
+      .pagination-mobile a:hover:not(.active) {background-color: #ddd;}
+      
+}

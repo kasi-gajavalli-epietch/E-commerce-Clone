@@ -1,0 +1,236 @@
+@font-face {
+    font-family: "AvenirLTStd-Roman";
+    src: url(images/avenir_ff/AvenirLTStd-Roman.otf);
+}
+@font-face {
+    font-family: "AvenirLTStd-Book" ;
+    src: url(images/avenir_ff/AvenirLTStd-Book.otf);
+}
+@font-face {
+    font-family: "AvenirLTStd-Black";
+    src: url(images/avenir_ff/AvenirLTStd-Black.otf);
+}
+body {
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Admin login*/
+
+.admin_login{
+    display: block;
+    padding: 50px;
+    align-items: center;
+    background-color: linear-gradient(to left, #4B2C4C , #151F28);;
+}
+.admin_login input{
+    margin: 20px;
+    width: 300px;
+}
+.admin_login .submit{
+    background-color: aqua;
+}
+.admin_login h1{
+    font-family: "AvenirLTStd-Black";
+    text-align: center;
+}
+/*general*/
+
+.general {
+    display: block;
+    padding: 50px;
+    align-items: center;
+    background-color: linear-gradient(to left, #4B2C4C , #151F28);;
+    text-align: center;
+}
+
+/*Liens page general*/
+
+a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  
+  a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
+  
+  /* Presentational Styles */
+  a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  
+  a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
+  
+  /* Presentational Styles */
+  .general {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    line-height: 1.5;
+    place-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #18272F;
+    font-weight: 700;
+    vertical-align: top;
+  }
+
+  /*Publier article*/
+
+  .publier-article{
+    display: inline-block;
+    padding: 50px;
+    align-items: center;
+    background-color: linear-gradient(to left, #4B2C4C , #151F28);
+    
+}
+.publier-article input{
+    margin: 20px;
+    width: 300px;
+}
+.publier-article .submit, .file{
+    background-color: aqua;
+}
+.publier-article h1{
+    font-family: "AvenirLTStd-Black";
+    text-align: center;
+}
+/*members.php*/
+.member-grand{
+  padding: 10px;
+
+}
+.member{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0px;
+  margin: 0px;
+  max-width: 1000px;
+  height: 100px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "AvenirLTStd-Black";
+  font-weight: lighter;
+  border:#23a6d5;
+}
+.member .value{
+  font-size: 15px;
+}
+.member .modifier{
+  color:black; 
+  background-color:yellow; 
+  margin-bottom: 10px;
+}
+.member .supprimer{
+  color:white; 
+  background-color:red; 
+  margin-bottom: 10px;
+}
+.member .button-grand{
+  padding: 0px;
+}
+.articles {
+  display: grid;
+  max-width: 100%;
+  
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+ 
+}
